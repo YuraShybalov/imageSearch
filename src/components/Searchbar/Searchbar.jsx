@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Searchbar = () => {
+const Searchbar = ({ state, handleChange }) => {
   return (
     <header className="searchbar">
       <form className="searchForm">
@@ -11,6 +11,9 @@ const Searchbar = () => {
         <input
           className="searchFormInput"
           type="text"
+          name="serchValue"
+          value={state.serchValue}
+          onChange={handleChange}
           autoComplete="off"
           autoFocus
           placeholder="Search images and photos"

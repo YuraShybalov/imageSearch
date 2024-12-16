@@ -1,10 +1,15 @@
+import { nanoid } from 'nanoid';
 import React from 'react';
 
-const ImageGalleryItem = () => {
+const ImageGalleryItem = ({ imagesData }) => {
   return (
-    <li className="galleryItem">
-      <img src="" alt="" />
-    </li>
+    <>
+      {imagesData.map(({ id, webformatURL }) => (
+        <li key={nanoid()} className="galleryItem">
+          <img src={webformatURL} alt="" />
+        </li>
+      ))}
+    </>
   );
 };
 

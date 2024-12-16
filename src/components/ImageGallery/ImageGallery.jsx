@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ImageGallery = ({ children }) => {
-  return <ul class="gallery">{children}</ul>;
+  return <ul className="imageGallery">{children}</ul>;
 };
 
 export default ImageGallery;
